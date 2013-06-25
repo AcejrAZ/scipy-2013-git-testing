@@ -55,7 +55,7 @@ def read_animals(filename):
 
     f.close()
 
-    return dates, times, counts, species
+    return dates, times, species, counts
 
 
 def mean(nums):
@@ -71,7 +71,10 @@ def mean(nums):
     m : number
 
     """
-    # fill this in
+    #import numpy
+    #numpy.mean(nums)
+    m = float(sum(nums)) / float(len(nums)) if len(nums) > 0 else float('nan')
+    return m
 
 
 def filter_animals_by_kind(kind, date, time, species, count):
